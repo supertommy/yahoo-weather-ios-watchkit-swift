@@ -54,11 +54,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootVC = window?.rootViewController as RootViewController
         let data = rootVC.modelController.pageData[0]
         
-        reply([
-            "title": "\(data.city), \(data.region)",
-            "temp": "\(data.temperature)",
-            "unit": data.unit
-        ])
+        data.update().then { 
+            (weatherData: WeatherData) in
+            
+            reply([
+                "title": "\(weatherData.city), \(weatherData.region)",
+                "temp": "\(weatherData.temperature)",
+                "unit": weatherData.unit
+            ])
+        }
     }
 }
 

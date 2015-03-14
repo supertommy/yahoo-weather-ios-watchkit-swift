@@ -10,6 +10,18 @@ import Foundation
 
 public class WeatherData
 {
+    public enum State
+    {
+        case UNINITIALIZED, LOADING, READY
+    }
+    
+    public typealias OnUpdatedCallback = (data: WeatherData) -> Void
+    
+    private var _state: State
+    public var state: State {
+        return _state
+    }
+    
     public var name: String {
         if let s = _name
         {
@@ -58,25 +70,62 @@ public class WeatherData
     private var _city: String?
     private var _region: String?
     
+    private var onUpdated: OnUpdatedCallback?
+    
     init(location: String)
     {
+        _state = State.UNINITIALIZED
         _location = location
         
         update()
     }
     
-    public func update()
+    public func update() -> WeatherData
     {
+        if (self.state == State.LOADING)
+        {
+            return self
+        }
+        
+        self._state = State.LOADING
+        
         let query = "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"\(_location)\")"
-        let result = JSON(YQL.query(query))
         
-        let response = result["query"]["results"]["channel"]
+        Craft.promise {
+            (resolve: (value: Value) -> (), reject: (value: Value) -> ()) -> () in
+            
+            let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+            dispatch_async(queue, {
+                
+                let result = JSON(YQL.query(query))
+                
+                dispatch_sync(dispatch_get_main_queue(), {
+                    let response = result["query"]["results"]["channel"]
+                    
+                    self._name = response["title"].string
+                    self._temperature = response["item"]["condition"]["temp"].intValue
+                    self._unit = response["unit"]["temperature"].string
+                    
+                    self._city = response["location"]["city"].string
+                    self._region = response["location"]["region"].string
+                    
+                    self._state = State.READY
+                    
+                    if let cb = self.onUpdated
+                    {
+                        cb(data: self);
+                    }
+                })
+            })
+        }
+
         
-        _name = response["title"].string
-        _temperature = response["item"]["condition"]["temp"].intValue
-        _unit = response["unit"]["temperature"].string
-        
-        _city = response["location"]["city"].string
-        _region = response["location"]["region"].string
+        return self
     }
+    
+    public func then(resolve: OnUpdatedCallback)
+    {
+        self.onUpdated = resolve;
+    }
+    
 }
