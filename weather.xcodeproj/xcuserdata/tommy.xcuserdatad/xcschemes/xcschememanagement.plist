@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - weather WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Notification - weather WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>weather WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>weather.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>65D001B91AB4B90F00121383</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65D001E61AB4D73A00121383</key>
 		<dict>
 			<key>primary</key>
 			<true/>

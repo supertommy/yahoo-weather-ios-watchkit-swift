@@ -18,6 +18,14 @@
 		65D001CB1AB4B9B500121383 /* YQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D001CA1AB4B9B500121383 /* YQL.swift */; };
 		65D001CD1AB4C36700121383 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D001CC1AB4C36700121383 /* WeatherData.swift */; };
 		65D001D31AB4CDD000121383 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D001D21AB4CDD000121383 /* SwiftyJSON.swift */; };
+		65D001DE1AB4D73A00121383 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D001DD1AB4D73A00121383 /* InterfaceController.swift */; };
+		65D001E01AB4D73A00121383 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D001DF1AB4D73A00121383 /* NotificationController.swift */; };
+		65D001E21AB4D73A00121383 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D001E11AB4D73A00121383 /* GlanceController.swift */; };
+		65D001E41AB4D73A00121383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D001E31AB4D73A00121383 /* Images.xcassets */; };
+		65D001E81AB4D73A00121383 /* weather WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 65D001E71AB4D73A00121383 /* weather WatchKit App.app */; };
+		65D001F01AB4D73A00121383 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D001EE1AB4D73A00121383 /* Interface.storyboard */; };
+		65D001F21AB4D73A00121383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D001F11AB4D73A00121383 /* Images.xcassets */; };
+		65D001F61AB4D73A00121383 /* weather WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65D001D81AB4D73A00121383 /* weather WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +36,35 @@
 			remoteGlobalIDString = 65D001A01AB4B90F00121383;
 			remoteInfo = weather;
 		};
+		65D001E91AB4D73A00121383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65D001991AB4B90F00121383 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65D001E61AB4D73A00121383;
+			remoteInfo = "weather WatchKit App";
+		};
+		65D001F31AB4D73A00121383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65D001991AB4B90F00121383 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65D001D71AB4D73A00121383;
+			remoteInfo = "weather WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65D001F51AB4D73A00121383 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				65D001F61AB4D73A00121383 /* weather WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		65D001A11AB4B90F00121383 /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +82,17 @@
 		65D001CA1AB4B9B500121383 /* YQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQL.swift; sourceTree = "<group>"; };
 		65D001CC1AB4C36700121383 /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		65D001D21AB4CDD000121383 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		65D001D81AB4D73A00121383 /* weather WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "weather WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D001DB1AB4D73A00121383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D001DC1AB4D73A00121383 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		65D001DD1AB4D73A00121383 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		65D001DF1AB4D73A00121383 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		65D001E11AB4D73A00121383 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		65D001E31AB4D73A00121383 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65D001E71AB4D73A00121383 /* weather WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D001ED1AB4D73A00121383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D001EF1AB4D73A00121383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		65D001F11AB4D73A00121383 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +110,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65D001D51AB4D73A00121383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +125,8 @@
 			children = (
 				65D001A31AB4B90F00121383 /* weather */,
 				65D001BD1AB4B90F00121383 /* weatherTests */,
+				65D001D91AB4D73A00121383 /* weather WatchKit Extension */,
+				65D001EB1AB4D73A00121383 /* weather WatchKit App */,
 				65D001A21AB4B90F00121383 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +136,8 @@
 			children = (
 				65D001A11AB4B90F00121383 /* weather.app */,
 				65D001BA1AB4B90F00121383 /* weatherTests.xctest */,
+				65D001D81AB4D73A00121383 /* weather WatchKit Extension.appex */,
+				65D001E71AB4D73A00121383 /* weather WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +185,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		65D001D91AB4D73A00121383 /* weather WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				65D001DD1AB4D73A00121383 /* InterfaceController.swift */,
+				65D001DF1AB4D73A00121383 /* NotificationController.swift */,
+				65D001E11AB4D73A00121383 /* GlanceController.swift */,
+				65D001E31AB4D73A00121383 /* Images.xcassets */,
+				65D001DA1AB4D73A00121383 /* Supporting Files */,
+			);
+			path = "weather WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		65D001DA1AB4D73A00121383 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65D001DB1AB4D73A00121383 /* Info.plist */,
+				65D001DC1AB4D73A00121383 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65D001EB1AB4D73A00121383 /* weather WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				65D001EE1AB4D73A00121383 /* Interface.storyboard */,
+				65D001F11AB4D73A00121383 /* Images.xcassets */,
+				65D001EC1AB4D73A00121383 /* Supporting Files */,
+			);
+			path = "weather WatchKit App";
+			sourceTree = "<group>";
+		};
+		65D001EC1AB4D73A00121383 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65D001ED1AB4D73A00121383 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,10 +234,12 @@
 				65D0019D1AB4B90F00121383 /* Sources */,
 				65D0019E1AB4B90F00121383 /* Frameworks */,
 				65D0019F1AB4B90F00121383 /* Resources */,
+				65D001F51AB4D73A00121383 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				65D001F41AB4D73A00121383 /* PBXTargetDependency */,
 			);
 			name = weather;
 			productName = weather;
@@ -165,6 +264,39 @@
 			productReference = 65D001BA1AB4B90F00121383 /* weatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		65D001D71AB4D73A00121383 /* weather WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65D001FA1AB4D73A00121383 /* Build configuration list for PBXNativeTarget "weather WatchKit Extension" */;
+			buildPhases = (
+				65D001D41AB4D73A00121383 /* Sources */,
+				65D001D51AB4D73A00121383 /* Frameworks */,
+				65D001D61AB4D73A00121383 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65D001EA1AB4D73A00121383 /* PBXTargetDependency */,
+			);
+			name = "weather WatchKit Extension";
+			productName = "weather WatchKit Extension";
+			productReference = 65D001D81AB4D73A00121383 /* weather WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		65D001E61AB4D73A00121383 /* weather WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65D001F71AB4D73A00121383 /* Build configuration list for PBXNativeTarget "weather WatchKit App" */;
+			buildPhases = (
+				65D001E51AB4D73A00121383 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "weather WatchKit App";
+			productName = "weather WatchKit App";
+			productReference = 65D001E71AB4D73A00121383 /* weather WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +312,12 @@
 					65D001B91AB4B90F00121383 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 65D001A01AB4B90F00121383;
+					};
+					65D001D71AB4D73A00121383 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					65D001E61AB4D73A00121383 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -198,6 +336,8 @@
 			targets = (
 				65D001A01AB4B90F00121383 /* weather */,
 				65D001B91AB4B90F00121383 /* weatherTests */,
+				65D001D71AB4D73A00121383 /* weather WatchKit Extension */,
+				65D001E61AB4D73A00121383 /* weather WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +357,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65D001D61AB4D73A00121383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D001E41AB4D73A00121383 /* Images.xcassets in Resources */,
+				65D001E81AB4D73A00121383 /* weather WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65D001E51AB4D73A00121383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D001F01AB4D73A00121383 /* Interface.storyboard in Resources */,
+				65D001F21AB4D73A00121383 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +403,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65D001D41AB4D73A00121383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D001E01AB4D73A00121383 /* NotificationController.swift in Sources */,
+				65D001DE1AB4D73A00121383 /* InterfaceController.swift in Sources */,
+				65D001E21AB4D73A00121383 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -252,6 +420,16 @@
 			isa = PBXTargetDependency;
 			target = 65D001A01AB4B90F00121383 /* weather */;
 			targetProxy = 65D001BB1AB4B90F00121383 /* PBXContainerItemProxy */;
+		};
+		65D001EA1AB4D73A00121383 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65D001E61AB4D73A00121383 /* weather WatchKit App */;
+			targetProxy = 65D001E91AB4D73A00121383 /* PBXContainerItemProxy */;
+		};
+		65D001F41AB4D73A00121383 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65D001D71AB4D73A00121383 /* weather WatchKit Extension */;
+			targetProxy = 65D001F31AB4D73A00121383 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -270,6 +448,14 @@
 				65D001B41AB4B90F00121383 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		65D001EE1AB4D73A00121383 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65D001EF1AB4D73A00121383 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -356,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/weather/Frameworks",
@@ -370,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/weather/Frameworks",
@@ -414,6 +602,60 @@
 			};
 			name = Release;
 		};
+		65D001F81AB4D73A00121383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = weather_WatchKit_Extension;
+				INFOPLIST_FILE = "weather WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		65D001F91AB4D73A00121383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = weather_WatchKit_Extension;
+				INFOPLIST_FILE = "weather WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		65D001FB1AB4D73A00121383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "weather WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		65D001FC1AB4D73A00121383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "weather WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -439,6 +681,22 @@
 			buildConfigurations = (
 				65D001C81AB4B90F00121383 /* Debug */,
 				65D001C91AB4B90F00121383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		65D001F71AB4D73A00121383 /* Build configuration list for PBXNativeTarget "weather WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D001F81AB4D73A00121383 /* Debug */,
+				65D001F91AB4D73A00121383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		65D001FA1AB4D73A00121383 /* Build configuration list for PBXNativeTarget "weather WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D001FB1AB4D73A00121383 /* Debug */,
+				65D001FC1AB4D73A00121383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

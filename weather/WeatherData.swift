@@ -34,10 +34,29 @@ public class WeatherData
         return "F"
     }
     
+    public var city: String {
+        if let c = _city
+        {
+            return c
+        }
+        return ""
+    }
+    
+    public var region: String {
+        if let r = _region
+        {
+            return r
+        }
+        return ""
+    }
+    
     private var _location: String
     private var _name: String?
     private var _temperature: Int?
     private var _unit: String?
+    
+    private var _city: String?
+    private var _region: String?
     
     init(location: String)
     {
@@ -56,5 +75,8 @@ public class WeatherData
         _name = response["title"].string
         _temperature = response["item"]["condition"]["temp"].intValue
         _unit = response["unit"]["temperature"].string
+        
+        _city = response["location"]["city"].string
+        _region = response["location"]["region"].string
     }
 }

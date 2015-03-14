@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C87BFE3F-4B0E-465F-B1FE-6B3B99835CB0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>weather</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>90CA4835A715E12E3F0B3965E62A6B242A8BBEAB</key>
+		<string>github.com:supertommy/yahoo-weather-ios-swift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>weather.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>90CA4835A715E12E3F0B3965E62A6B242A8BBEAB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:supertommy/yahoo-weather-ios-swift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>90CA4835A715E12E3F0B3965E62A6B242A8BBEAB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>90CA4835A715E12E3F0B3965E62A6B242A8BBEAB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>weather</string>
+		</dict>
+	</array>
+</dict>
+</plist>
