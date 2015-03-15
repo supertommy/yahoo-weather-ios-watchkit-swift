@@ -30,10 +30,24 @@
             <objects>
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="weather_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Weather for New York, NY" textAlignment="left" numberOfLines="2" id="MoK-kn-bS4"/>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="-" textAlignment="center" id="aPC-Z9-3N3">
+                                    <fontDescription key="font" type="system" pointSize="40"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="aPC-Z9-3N3" id="bJJ-WO-PLQ"/>
+                        <outlet property="titleLabel" destination="MoK-kn-bS4" id="19a-Jn-q8Z"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="235" y="672"/>

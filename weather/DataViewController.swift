@@ -38,8 +38,12 @@ class DataViewController: UIViewController
     {
         if let d = weatherData
         {
-            self.dataLabel.text = d.name
-            self.temperatureLabel.text = "\(d.temperature)\(d.unit)"
+            d.then {
+                (data: WeatherData) in
+                
+                self.dataLabel.text = data.name
+                self.temperatureLabel.text = "\(data.temperature)\(data.unit)"
+            }
         }
 
     }

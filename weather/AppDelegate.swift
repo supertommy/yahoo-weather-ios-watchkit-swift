@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             (weatherData: WeatherData) in
             
             reply([
-                "title": "\(weatherData.city), \(weatherData.region)",
+                "location": "\(weatherData.city), \(weatherData.region)",
                 "temp": "\(weatherData.temperature)",
                 "unit": weatherData.unit
             ])

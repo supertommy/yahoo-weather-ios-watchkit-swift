@@ -38,7 +38,7 @@ class InterfaceController: WKInterfaceController
 
     private func handleResponseFromPhoneApp(replyInfo: [NSObject: AnyObject]!, error: NSError!)
     {
-        let title = replyInfo["title"] as String
+        let title = replyInfo["location"] as String
         let temp = replyInfo["temp"] as String
         let unit = replyInfo["unit"] as String
         
