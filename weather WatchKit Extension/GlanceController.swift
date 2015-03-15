@@ -19,6 +19,8 @@ class GlanceController: WKInterfaceController
     {
         super.awakeWithContext(context)
         
+        self.titleLabel.setText("")
+        
         let userInfo = Dictionary<NSObject, AnyObject>()
         WKInterfaceController.openParentApplication(userInfo, reply: handleResponseFromPhoneApp)
     }
@@ -41,7 +43,7 @@ class GlanceController: WKInterfaceController
         let temp = replyInfo["temp"] as String
         let unit = replyInfo["unit"] as String
         
-        self.titleLabel.setText("Weather in \(title)")
+        self.titleLabel.setText("Weather for \(title)")
         self.temperatureLabel.setText("\(temp)\(unit)")
     }
 }
