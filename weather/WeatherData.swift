@@ -70,7 +70,7 @@ public class WeatherData
     private var _city: String?
     private var _region: String?
     
-    private var onUpdatedCallbacks: [OnUpdatedCallback?]
+    private var onUpdatedCallbacks: [OnUpdatedCallback]
     
     init(location: String)
     {
@@ -115,10 +115,7 @@ public class WeatherData
                     
                     for cb in self.onUpdatedCallbacks
                     {
-                        if let action = cb
-                        {
-                            action(data: self);
-                        }
+                        cb(data: self)
                     }
                     
                     self.onUpdatedCallbacks.removeAll(keepCapacity: true)
