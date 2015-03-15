@@ -70,12 +70,14 @@ public class WeatherData
     private var _city: String?
     private var _region: String?
     
-    private var onUpdated: OnUpdatedCallback?
+    private var onUpdatedCallbacks: [OnUpdatedCallback?]
     
     init(location: String)
     {
         _state = State.UNINITIALIZED
         _location = location
+        
+        self.onUpdatedCallbacks = []
         
         update()
     }
@@ -111,10 +113,15 @@ public class WeatherData
                     
                     self._state = State.READY
                     
-                    if let cb = self.onUpdated
+                    for cb in self.onUpdatedCallbacks
                     {
-                        cb(data: self);
+                        if let action = cb
+                        {
+                            action(data: self);
+                        }
                     }
+                    
+                    self.onUpdatedCallbacks.removeAll(keepCapacity: true)
                 })
             })
         }
@@ -125,7 +132,7 @@ public class WeatherData
     
     public func then(resolve: OnUpdatedCallback)
     {
-        self.onUpdated = resolve;
+        self.onUpdatedCallbacks.append(resolve);
     }
     
 }

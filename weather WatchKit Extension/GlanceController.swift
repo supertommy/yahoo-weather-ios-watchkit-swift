@@ -21,20 +21,27 @@ class GlanceController: WKInterfaceController
         
         self.titleLabel.setText("")
         
-        let userInfo = Dictionary<NSObject, AnyObject>()
-        WKInterfaceController.openParentApplication(userInfo, reply: handleResponseFromPhoneApp)
+        getUpdatedData()
     }
 
     override func willActivate()
     {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        getUpdatedData()
     }
 
     override func didDeactivate()
     {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    private func getUpdatedData()
+    {
+        let userInfo = Dictionary<NSObject, AnyObject>()
+        WKInterfaceController.openParentApplication(userInfo, reply: handleResponseFromPhoneApp)
     }
     
     private func handleResponseFromPhoneApp(replyInfo: [NSObject: AnyObject]!, error: NSError!)
